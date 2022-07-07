@@ -30,6 +30,8 @@ function playerPlay() {
         case "scissors":
             playerChoice = "Scissors";
             break;
+        default:
+            console.log("Please enter a correct value. (Hint: Check your spelling!)");
     };
     return playerChoice;
 }
@@ -61,14 +63,19 @@ function playRound(playerSelection, computerSelection) {
                 case "Paper":
                     return "Computer selected Scissors. Player selected Paper. Computer wins!"
                 case "Scissors":
-                    console.log("Gi")
                     return "Both players selected Scissors. It's a tie!"
             };
     };
 }
 
-let computerSelection = computerPlay();
-let playerSelection = playerPlay();
-console.log(computerSelection);
-console.log(playerSelection);
-console.log(playRound(playerSelection, computerSelection))
+function game() {
+    for (let i = 0; i < 5; i++) {
+    console.log(playRound(playerPlay(), computerPlay()))
+    }
+}
+
+let playerSelection;
+let computerSelection;
+let playerScore;
+let computerScore;
+game();
