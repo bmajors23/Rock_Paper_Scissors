@@ -1,3 +1,5 @@
+// Rock Paper Scissors images by nightwolfdezines
+
 const container = document.querySelector(".container");
 const result = document.querySelector("#resultText");
 const rockBtn = document.querySelector("#rockBtn");
@@ -32,6 +34,7 @@ scissorsBtn.addEventListener("click", () => {
 })
 
 function updateScore() {
+    winnerText.textContent = "";
     score.textContent = `Score: Computer: ${computerScore} Player: ${playerScore}`;
     if (computerScore == 5) {
         winnerText.textContent = "Computer Wins! Click Rock Paper or Scissors to begin new game.";
