@@ -1,3 +1,18 @@
+const container = document.querySelector(".container");
+const result = document.querySelector(".result");
+const rockBtn = document.querySelector("#rockBtn");
+const paperBtn = document.querySelector("#paperBtn");
+const scissorsBtn = document.querySelector("#scissorsBtn");
+
+let playerSelection;
+let computerSelection;
+let playerScore = 0;
+let computerScore = 0;
+
+rockBtn.addEventListener("click", () => {
+    result.textContent = playRound("Rock", computerPlay());
+})
+
 function computerPlay() {
     let randNum = Math.floor(Math.random() * 3);
     let compChoice;
@@ -13,26 +28,6 @@ function computerPlay() {
             break;
     };
     return compChoice;
-}
-
-function playerPlay() {
-    let playerInput = prompt("Choose Rock, Paper, or Scissors");
-    let lowerInput = playerInput.toLowerCase();
-    let playerChoice;
-    switch(lowerInput) {
-        case "rock":
-            playerChoice = "Rock";
-            break;
-        case "paper":
-            playerChoice = "Paper";
-            break;
-        case "scissors":
-            playerChoice = "Scissors";
-            break;
-        default:
-            console.log("Please enter a correct value. (Hint: Check your spelling!)");
-    };
-    return playerChoice;
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -73,15 +68,12 @@ function playRound(playerSelection, computerSelection) {
     };
 }
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-    console.log(playRound(playerPlay(), computerPlay()))
-    console.log(`Score: Player: ${playerScore} Computer: ${computerScore}`)
-    }
-}
+// function game() {
+//     for (let i = 0; i < 5; i++) {
+//     console.log(playRound(playerPlay(), computerPlay()))
+//     console.log(`Score: Player: ${playerScore} Computer: ${computerScore}`)
+//     }
+// }
 
-let playerSelection;
-let computerSelection;
-let playerScore = 0;
-let computerScore = 0;
-game();
+
+// game();
