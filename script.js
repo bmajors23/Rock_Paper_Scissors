@@ -10,6 +10,7 @@ const winner = document.querySelector(".winnerText");
 
 const winnerText = document.createElement("p");
 winnerText.classList.add("winnerText");
+winnerText.style.margin = "2"
 winner.appendChild(winnerText);
 
 

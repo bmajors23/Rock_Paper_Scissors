@@ -4,7 +4,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: green;
+
     text-align: center;
     font-family: sans-serif;
     font-size: 24px;
@@ -16,16 +16,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: grey;
+
 
 }
 
 button {
     min-height: 100px;
     min-width: 100px;
+    margin: 50px;
 }
 
-#rockBtn {
-    
+.rpsImg {
+    height: 100px;
+    width: 100px;
 }
 
